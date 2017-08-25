@@ -1,3 +1,5 @@
+//$(document).ready(function()
+//{
 window.onload=function()
 {
 	$("#startpage").show();
@@ -7,17 +9,17 @@ window.onload=function()
 	$("#goback").on("click",timer.reset());
 };
 
+//alert($("#sol1c").val());
+//alert(solution_array[0][1]);
+//alert(Unanswered);
+
 var intervalid;
 var clockRunning=false;
 var solution_array=[[$("#ques1").html,$("#sol1c").val()],[$("#ques2").html,$("#sol2b").val()],[$("#ques3").html,$("#sol3c").val()],[$("#ques4").html,$("#sol4a").val],[$("#ques5").html,$("#sol5b").val],[$("#ques6").html,$("#sol6b").val],[$("#ques7").html,$("#sol7b").val],[$("#ques8").html,$("#sol8d").val],[$("#ques9").html,$("#sol9a").val],[$("#ques10").html,$("#sol10b").val]];
 var correct=0;
 var incorrect=0;
 var unanswered=10;
-var my_ans=[];
-//alert($("#sol1c").val());
 
-//alert(solution_array[0][1]);
-//alert(Unanswered);
 var timer={
 
 	time:60,
@@ -70,35 +72,44 @@ var timer={
     });
 */
 //debugger;
+//$('#test2.test1').prop('checked', true);
 //document.getElementbyId("resultspage").innerHTML = unanswered;
 //var seeit= document.querySelector('input[id=sol1c]:checked').value;
 //alert(seeit);
+
+/*function checking()
+{
+	if($('#q1.s3').prop('checked',true))
+	{
+		console.log("Hey you: "+correct);
+	}
+}*/ 
+
+//checking();
+
 function checktoseeifchecked()
 {
-	var ar = new Array(10);
+//	var ar = new Array(10);
 	for(var a=0;a<solution_array.length;a++)
 	{
 		alert("The value of a: "+a);
 		//var this_s=$("#q"+1+".s1").val();
 		//alert(this_s);
-		ar[a]=("q"+parseInt(a+1));
-		alert(ar[a]);
-		if((("input[type=radio][name="choice"+parseInt(a+1)][class="s1"]:checked").val())||
-			(("input[type=radio][name="choice"+parseInt(a+1)][class="s2"]:checked").val())||
-			(("input[type=radio][name="choice"+parseInt(a+1)][class="s3"]:checked").val())||
-			(("input[type=radio][name="choice"+parseInt(a+1)][class="s4"]:checked").val()))
-		//if(($(("#q"+parseInt(a+1))&&(".s1")).is(':checked'))||($(("#q"+parseInt(a+1))&&(".s2")).is(':checked'))||($(("#q"+parseInt(a+1))&&(".s3")).is(':checked'))||($(("#q"+parseInt(a+1))&&(".s4")).is(':checked')))
-		//if(($('input[id="q"+a+1][class=s1]:checked'))||($('input[id="q"+a+1][class=s2]:checked'))||($('input[id="q"+a+1][class=s3]:checked'))||($('input[id="q"+a+1][class=s4]:checked')))
+		//$('#test2.test1').prop('checked', true);
+		//$('input:radio[class=test1][id=test2]').prop('checked', true);
+	//	ar[a]=("q"+parseInt(a+1));
+	//	alert(ar[a]);
+		//if(($('input:'))||($('#q'+parseInt(a+1)+'.s2').prop('checked',true))||($('#q'+parseInt(a+1)+'.s3').prop('checked',true))||($('#q'+parseInt(a+1)+'.s4').prop('checked',true)))
+		//if(($('input:radio[id="q"parseInt(a+1)][class=s1]').prop('checked',true))||($('input:radio[id="q"parseInt(a+1)][class=s2]').prop('checked',true))||($('input:radio[id="q"parseInt(a+1)][class=s3]').prop('checked',true))||($('input:radio[id="q"parseInt(a+1)][class=s4]').prop('checked',true)))
+		if(($(".s1").is(':checked'))||($(".s2").is(':checked'))||($(".s3").is(':checked'))||($(".s4").is(':checked')))
+		//if(($('input:radio[id="q"+a+1][class=s1]:checked'))||($('input[id="q"+a+1][class=s2]:checked'))||($('input[id="q"+a+1][class=s3]:checked'))||($('input[id="q"+a+1][class=s4]:checked')))
 		//if(($(".s1").attr('checked', true))||($(".s2").attr('checked', true))||($(".s3").attr('checked', true))||($(".s4").attr('checked', true)))
 		{
 			unanswered--;
 			alert("Number not answerd is: "+unanswered);
 			//document.getElementbyId("resultspage").innerHTML = a;
 			//document.getElementbyId("startpage").innerHTML = unanswered;
-			if(($(("#q"+parseInt(a+1))&&(".s1")).val()===solution_array[a][1])||
-				($(("#q"+parseInt(a+1))&&(".s2")).val()===solution_array[a][1])||
-				($(("#q"+parseInt(a+1))&&(".s3")).val()===solution_array[a][1])||
-				($(("choice"+parseInt(a+1))&&(".s4")).val()===solution_array[a][1]))
+			if(($(".s1").val()===solution_array[a][1])||($(".s2").val()===solution_array[a][1])||($(".s3").val()===solution_array[a][1])||($(".s4").val()===solution_array[a][1]))
 			{
 				//document.getElementbyId("resultspage").innerHTML = a;
 				correct++;
@@ -113,9 +124,6 @@ function checktoseeifchecked()
 			alert("Nothing clicked");
 		}
 	}
-	$("#correct").html(correct);
-	$("#incorrect").html(incorrect);
-	$("#unanswered").html(unanswered);
 }
 /*function checktoseeifcorrect(array)
 {
@@ -131,6 +139,7 @@ function checktoseeifchecked()
 
 $("#turnin").click(function ()
 {
+	//checking();
 	checktoseeifchecked();
 	$("#resultspage").show();
 	$("#quizpage").hide();
@@ -150,3 +159,4 @@ $("#goback").click(function(){
 
 var html="<p>Correct: "+correct+"</p><br>"+"<p>Incorrect: "+incorrect+"</p><br>"+"<p>Unanswered: "+unanswered+"</p>";
 document.querySelector("#your_score").innerHTML=html;
+//});
