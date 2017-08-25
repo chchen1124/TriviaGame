@@ -1,0 +1,28 @@
+body{
+	background: url("C:/Users/Chris/Desktop/QuizGame/TriviaGame/assets/images/quizzy.jpg");
+}
+
+article{
+	width:500px;
+	height: 1050px;
+	background-color: yellow;
+	text-align: center;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 425px;
+}
+
+h1{
+	font-size: 35px;
+	color:blue;
+	font-family: Helvetica,sans-serif;
+}
+
+#q1 #q2 #q3 #q4 #q5 #q6 #q7 #q8 #q9 #q10{
+	text-align: left;
+}
+
+#turnin{
+	color:red;
+}

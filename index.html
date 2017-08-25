@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz Time Folks!</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	</head>
+	<body>
+		<article id="startpage">
+			<h1>Totally Trivial Trivia!</h1>
+			<br>
+			<input id="startquiz" type="submit" value="Begin Quiz">
+		</article>	
+		<article id="quizpage">
+			<h1>Totally Trivial Trivia!</h1>
+			<!--<button id="startquiz" value="Start">Start</button>-->
+			<div id="timey">
+				Time Remaining:<p id="cur_time">60</p>
+			</div>
+			<div id="q1">
+				<p id="ques1">1.) What is the capital of the United States?</p>
+				<input name="choice1" id="sol1a" class="s1" type="radio" value=1>San Diego</input>
+				<input name="choice1" id="sol1b" class="s2" type="radio" value=2>Beijing</input>
+				<input name="choice1" id="sol1c" class="s3" type="radio" value=3>Washington DC</input>
+				<input name="choice1" id="sol1d" class="s4" type="radio" value=4>Paris</input>
+			</div>
+			<div id="q2">
+				<p id="ques2">2.) In Star Wars who is Obi Wan Kenobi's apprentice?</p>
+				<input name="choice2" id="sol2a" class="s1" type="radio" value=1>Mace Windu</input>
+				<input name="choice2" id="sol2b" class="s2" type="radio" value=2>Luke Skywalker</input>
+				<input name="choice2" id="sol2c" class="s3" type="radio" value=3>Yoda</input>
+				<input name="choice2" id="sol2d" class="s4" type="radio" value=4>R2-D2</input>
+			</div>
+			<div id="q3">
+				<p id="ques3">3.) Which two states in the US are separated from the rest?</p>
+				<input name="choice3" id="sol3a" class="s1" type="radio" value=1>Georgia and California</input>
+				<input name="choice3" id="sol3b" class="s2" type="radio" value=2>Tennessee and Wisconsin</input>
+				<input name="choice3" id="sol3c" class="s3" type="radio" value=3>Hawaii and Alaska</input>
+				<input name="choice3" id="sol3d" class="s4" type="radio" value=4>Oregon and Texas</input>
+			</div>
+			<div id="q4">
+				<p id="ques4">4.) What do bears eat?</p>
+				<input name="choice4" id="sol4a" class="s1" type="radio" value=1>fish</input>
+				<input name="choice4" id="sol4b" class="s2" type="radio" value=2>cheese</input>
+				<input name="choice4" id="sol4c" class="s3" type="radio" value=3>potato chips</input>
+				<input name="choice4" id="sol4d" class="s4" type="radio" value=4>donuts</input>
+			</div>
+			<div id="q5">
+				<p id="ques5">5.) In a leap year of 366 days, which month is the extra day in?</p>
+				<input name="choice5" id="sol5a" class="s1" type="radio" value=1>December</input>
+				<input name="choice5" id="sol5b" class="s2" type="radio" value=2>February</input>
+				<input name="choice5" id="sol5c" class="s3" type="radio" value=3>October</input>
+				<input name="choice5" id="sol5d" class="s4" type="radio" value=4>May</input>
+			</div>	
+			<div id="q6">
+				<p id="ques6">6.) What is 12+3*5?</p>
+				<input name="choice6" id="sol6a" class="s1" type="radio" value=1>115</input>
+				<input name="choice6" id="sol6b" class="s2" type="radio" value=2>27</input>
+				<input name="choice6" id="sol6c" class="s3" type="radio" value=3>75</input>
+				<input name="choice6" id="sol6d" class="s4" type="radio" value=4>9</input>
+			</div>
+			<div id="q7">
+				<p id="ques7">7.) Who were the first men on the moon?</p>
+				<input name="choice7" id="sol7a" class="s1" type="radio" value=1>Abraham Lincoln and George Washington</input>
+				<input name="choice7" id="sol7b" class="s2" type="radio" value=2>Buzz Aldrin and Neil Armstrong</input>
+				<input name="choice7" id="sol7c" class="s3" type="radio" value=3>Orville and Wilbur Wright</input>
+				<input name="choice7" id="sol7d" class="s4" type="radio" value=4>Marie and Pierre Curie</input>
+			</div>
+			<div id="q8">	
+				<p id="ques8">8.) Which European country is shaped like a boot?</p>
+				<input name="choice8" id="sol8a" class="s1" type="radio" value=1>Spain</input>
+				<input name="choice8" id="sol8b" class="s2" type="radio" value=2>Great Britain</input>
+				<input name="choice8" id="sol8c" class="s3" type="radio" value=3>Germany</input>
+				<input name="choice8" id="sol8d" class="s4" type="radio" value=4>Italy</input>
+			</div>
+			<div id="q9">	
+				<p id="ques9">9.) On Christmas Eve how does Santa Claus get into your house to put presents under the Xmas tree?</p>
+				<input name="choice9" id="sol9a" class="s1" type="radio" value=1>through the chimmney</input>
+				<input name="choice9" id="sol9b" class="s2" type="radio" value=2>through your front door</input>
+				<input name="choice9" id="sol9c" class="s3" type="radio" value=3>through your bedroom window</input>
+				<input name="choice9" id="sol9d" class="s4" type="radio" value=4>through your garage door</input>
+			</div>
+			<div id="q10">	
+				<p id="ques10">10.) What is the fairy tale that talks about a little girl walking in the woods while going to visit her grandmother?</p>
+				<input name="choice10" id="sol10a" class="s1" type="radio" value=1>Hansel and Gretel</input>
+				<input name="choice10" id="sol10b" class="s2" type="radio" value=2>Little Red Riding Hood</input>
+				<input name="choice10" id="sol10c" class="s3" type="radio" value=3>The Three Little Pigs</input>
+				<input name="choice10" id="sol10d" class="s4" type="radio" value=4>Jack and the Giant Beanstalk</input>
+			</div>
+			<br>	
+			<input id="turnin" type="submit" value="Submit">
+		</article>
+		<article id="resultspage">
+			<h1>Here are your results.</h1>
+			<div id="your_score">
+				<div id="correct"></div>
+				<div id="incorrect"></div>
+				<div id="unanswered"></div>
+			</div>
+			<input id="goback" type="submit" value="Quiz">
+		</article>
+		<script type="text/javascript" src="assets/javascript/app.js"></script>
+		<!--<script type="text/javascript" src="assets/javascript/test.js"></script>-->
+	</body>
+</html>
