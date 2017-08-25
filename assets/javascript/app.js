@@ -92,7 +92,7 @@ function checktoseeifchecked()
 //	var ar = new Array(10);
 	for(var a=0;a<solution_array.length;a++)
 	{
-		alert("The value of a: "+a);
+		//alert("The value of a: "+a);
 		//var this_s=$("#q"+1+".s1").val();
 		//alert(this_s);
 		//$('#test2.test1').prop('checked', true);
@@ -106,7 +106,7 @@ function checktoseeifchecked()
 		//if(($(".s1").attr('checked', true))||($(".s2").attr('checked', true))||($(".s3").attr('checked', true))||($(".s4").attr('checked', true)))
 		{
 			unanswered--;
-			alert("Number not answerd is: "+unanswered);
+			//alert("Number not answerd is: "+unanswered);
 			//document.getElementbyId("resultspage").innerHTML = a;
 			//document.getElementbyId("startpage").innerHTML = unanswered;
 			if(($(".s1").val()===solution_array[a][1])||($(".s2").val()===solution_array[a][1])||($(".s3").val()===solution_array[a][1])||($(".s4").val()===solution_array[a][1]))
